@@ -1,0 +1,16 @@
+Categories: products
+Template: home
+Summary: Product list
+
+%h1 Products
+%section.overview
+  / %heading
+  / %h1 Strategies?
+  :markdown
+    A summary of the various strategies in use.
+
+#sidebar
+  %heading
+    %h1 Strategies
+    %nav.categories
+      - display_menu(Nesta::Menu.for_path('/strategies'), :class => "menu", :levels => 3)

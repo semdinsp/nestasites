@@ -1,4 +1,7 @@
 /
-about
+strategies
+  strategies/geographic
+  strategies/value
+mathematica
+technotes
 contact
-  test

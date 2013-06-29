@@ -1,0 +1,28 @@
+Categories: geographic
+Template: home
+Summary: Geographic strategy
+
+%h1 Geographic Strategy
+
+%section.overview
+  :markdown
+    This is based on the belief that emerging markets will show more returns over time then the US or Europe. This is a long term trade (roughly 10-15 years).  The idea is not to select stocks but to select particular countries via ETFs.
+    
+    ## Performance
+    From March 9, 2010  this trade is  6.2% up. On April 1, I increased the investment and the trade is now up 3.9%.  On April 24th this trade is up at 6.5% including an additional investment in NYSE:AFK. In August 2010 after some market volatility this trade is up 6.2% and we have also invested in NYSE:VT to capture world performance. As of Nov 2010 this trade is up 18%
+    
+    ## Trade Process
+    Countries are evaluated against both growth rate, per capita gdp and population. See the bubble charts below.  In mathematica these are live diagrams and you can see the populations etc when you mouse over the chart.  Given the numerous african countries in the bubble chart I am thinking about using the Van Eck ETF tracker to target Africa as well.  At the end of April a position in AFK was taken.  Pakistan is supposedly coming out via Global X.  I have added Turkey and VT. I will eventually get rid of RSX
+    
+    Current countries of interest {"China", "India", "Pakistan", "Indonesia", "Russia"} and Africa
+    
+    ### Implemenation
+    {"NYSE:GXC", "NYSE:INP", "Pakistan", "NYSE:IDX", "NYSE:RSX",”NYSE:AFK”}  - I would appreciate criticisms concerns over the use of these ETFs
+    
+
+#sidebar
+  %heading
+    %h1 Strategies
+    %nav.categories
+      - display_menu(Nesta::Menu.for_path('/strategies'), :class => "menu", :levels => 3)
+
