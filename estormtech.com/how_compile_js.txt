@@ -1,0 +1,3 @@
+res=CoffeeScript.compile File.read("application.coffee")
+
+>> File.open('application.js', 'w') { |file| file.write(res) }
