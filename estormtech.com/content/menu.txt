@@ -1,6 +1,10 @@
 /
 technology
 products
-  products/geographic
-  products/value
+  products/crm
+  products/scratch
+  products/tms
+  products/dms
+support
+clients
 contact
