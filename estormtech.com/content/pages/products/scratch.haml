@@ -1,0 +1,22 @@
+Categories: scratch
+Template: home
+Summary: Scratch Card Data and Mathematics
+
+%h1 Scratch card data and mathematics
+
+%section.overview
+  :markdown
+    This is based Ben Graham’s  rules of thumb from the Intelligent Investor.
+    
+    ## Performance
+    The attached chart show performance on various dates.
+    
+    ## Trade Process
+    A value screener is created which searches for Low PEs and dividend growth. Some stocks are arbitrarily excluded.
+    
+
+#sidebar
+  %heading
+    %h1 Strategies
+    %nav.categories
+      - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)

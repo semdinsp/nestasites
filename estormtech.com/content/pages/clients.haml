@@ -1,0 +1,16 @@
+Categories: products
+Template: home
+Summary: Client list
+
+%h1 Clients
+%section.overview
+  / %heading
+  / %h1 Clients?
+  :markdown
+    A summary of the various clients.
+
+#sidebar
+  %heading
+    %h1 Strategies
+    %nav.categories
+      - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)
