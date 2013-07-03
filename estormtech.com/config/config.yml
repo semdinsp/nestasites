@@ -64,3 +64,4 @@ content: content
 production:
   cache: false    
   google_analytics_code: "UA-3157102-3"
+  gauges_site_id: "51d440de108d7b53620000b9"

@@ -43,7 +43,7 @@ header[role=banner]
   h1
     font-size: 100% * $h3-scale
     font-weight: 600
-    font-style: bold
+    font-style: normal
     letter-spacing: -1px
     @include text-shadow
   h2
@@ -62,9 +62,9 @@ h4, h5, h6
 h1
   @include adjust-font-size($h1-scale, 0.6, 0.4)
 h2
-  @include adjust-font-size($h2-scale, 1.5, 0.5)
+  @include adjust-font-size($h2-scale, 1.0, 0.5)
 h3
-  @include adjust-font-size($h3-scale, 1.5, 0.5)
+  @include adjust-font-size($h3-scale, 1.0, 0.5)
 h4
   @include adjust-font-size($h4-scale, 2, 0)
 
@@ -121,9 +121,9 @@ header[role=banner]
       margin: ($vertical-rhythm / 2) 0
       list-style: none
       li
-        @adjust-font-size($base-scale)
+        @include adjust-font-size($h4-scale, 1, 1, 1)
         font-weight: 700
-        width: 48%
+        width: 30%
         &:nth-child(odd)
           float: left
         &:nth-child(even)
@@ -268,7 +268,7 @@ section.pages > ol article p.read_more
   margin-top: 0
 
 div#sidebar
-  heading h1,
+  h1,
   nav.archive h1
     @include adjust-font-size(1, 0.2, 0)
     font-weight: bold
@@ -328,8 +328,6 @@ article.home
       @include adjust-font-size($h2-scale, 1.6, 0.4)
 
     &.intro
-      heading
-        display: none
       p
         width: 80%
         max-width: 23.5em
