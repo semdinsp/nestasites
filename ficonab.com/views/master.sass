@@ -22,10 +22,14 @@ article, aside, footer, header, nav, section
 // Typography
 
 @mixin heading-font
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
+  font-family: 'Droid Sans', 'Open Sans', Arial, sans-serif
+//  font-family: Arial, Helvetica, sans-serif
+//  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
 
 @mixin body-font
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
+  font-family: 'Open Sans', Arial, sans-serif
+//  font-family: Arial, Helvetica, sans-serif
+//  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
 
 @mixin text-shadow($color: #DCDBD1)
   text-shadow: 0 2px 5px $color
@@ -122,8 +126,8 @@ header[role=banner]
       list-style: none
       li
         @include adjust-font-size($h4-scale, 1, 1, 1)
-        font-weight: 700
-        width: 48%
+        font-weight: 650
+        width: 40%
         &:nth-child(odd)
           float: left
         &:nth-child(even)
@@ -352,13 +356,15 @@ article.home
       img
         vertical-align: middle
       table.lgfont
-        @include adjust-font-size(2.2, 1, 1, 4/3)
+        //@include adjust-font-size(2.5, 1, 1, 4/3)
         margin-left: auto
         margin-right: auto
-        text-align: cemter
+        text-align: center
         td
+          @include adjust-font-size(3.1, 1, 1, 4/3)
           border: 1px 
-          border-style: none
+          vertical-align: middle
+          border-style: dashed
 
 
     &.overview,
