@@ -3,6 +3,12 @@ $columns: 12
 $container-width: 60em
 $gutter: 2.107em // from modularscale.com with 16px/864px
 $unit: ($container-width - ($gutter * ($columns - 1))) / $columns
+html 
+  background: url(attachments/white-parchment.jpg) no-repeat center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
 
 @function grid-width($cols)
   @return ($cols * $unit) + (($cols - 1) * $gutter)
@@ -22,7 +28,7 @@ $sidebar-left: grid-left(9)
         li
           &:nth-child(even)
             float: left
-          width: grid-width(1.25)
+          width: grid-width(1.15)
           margin-right: $gutter
           &:last-child
             margin-right: 0
@@ -60,7 +66,7 @@ $sidebar-left: grid-left(9)
       margin-left: $sidebar-left
       padding: ($base-vertical-margin * 3) 0 $base-vertical-margin
 
-      heading h1
+      h1
         display: none
 
       nav.documentation
@@ -79,9 +85,9 @@ $sidebar-left: grid-left(9)
       ol, ul
         margin-left: 0
 
-      &.intro
-        p
-          @include adjust-font-size($h3-scale, 1, 1, 4/3)
+      // &.intro
+      //  p
+      //    @include adjust-font-size($h3-scale, 1, 1, 4/3)
 
       &.overview
         clear: both

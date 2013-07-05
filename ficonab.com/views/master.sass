@@ -43,7 +43,7 @@ header[role=banner]
   h1
     font-size: 100% * $h3-scale
     font-weight: 600
-    font-style: bold
+    font-style: normal
     letter-spacing: -1px
     @include text-shadow
   h2
@@ -62,7 +62,7 @@ h4, h5, h6
 h1
   @include adjust-font-size($h1-scale, 0.6, 0.4)
 h2
-  @include adjust-font-size($h2-scale, 1.5, 0.5)
+  @include adjust-font-size($h2-scale, 1.0, 0.5)
 h3
   @include adjust-font-size($h3-scale, 1.5, 0.5)
 h4
@@ -121,7 +121,7 @@ header[role=banner]
       margin: ($vertical-rhythm / 2) 0
       list-style: none
       li
-        @adjust-font-size($base-scale)
+        @include adjust-font-size($h4-scale, 1, 1, 1)
         font-weight: 700
         width: 48%
         &:nth-child(odd)
@@ -268,7 +268,7 @@ section.pages > ol article p.read_more
   margin-top: 0
 
 div#sidebar
-  heading h1,
+  h1,
   nav.archive h1
     @include adjust-font-size(1, 0.2, 0)
     font-weight: bold
@@ -328,16 +328,38 @@ article.home
       @include adjust-font-size($h2-scale, 1.6, 0.4)
 
     &.intro
-      heading
+      h1
         display: none
       p
         width: 80%
         max-width: 23.5em
         margin: 0 auto
         color: $meta-color
-
         @include adjust-font-size($h4-scale, 1, 1, 4/3)
         text-align: center
+
+    &.intro2
+      h1
+        display: none
+      p
+        width: 80%
+        max-width: 23.5em
+        margin: 0 auto
+        color: $meta-color
+        line-height: 3em
+        @include adjust-font-size(3.8, 1, 1, 4/3)
+        text-align: center
+      img
+        vertical-align: middle
+      table.lgfont
+        @include adjust-font-size(2.2, 1, 1, 4/3)
+        margin-left: auto
+        margin-right: auto
+        text-align: cemter
+        td
+          border: 1px 
+          border-style: none
+
 
     &.overview,
     &.features
@@ -378,3 +400,4 @@ article.home
         font-weight: bold
 
 @import "layout.sass"
+@import "firstpage.sass"

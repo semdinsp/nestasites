@@ -1,44 +1,46 @@
-Title: Ficonab Algorithms
 Template: home
-Link text: Home
+Layout: toppage
+Link text: Test
 
-%section.intro
+%header(role="banner")
+  %hgroup 
+    %img{:src=>"attachments/ficonab.jpg", :width => "100", :height=>"45"}  
+
+%section.intro2
   %heading
     %h1 Ficonab
   :markdown
-    An algorithmic trading business using Mathematica and integrated with interactive brokers.
-%section.overview
-  %heading
+    ...
+
+    An algorithmic trading project using Mathematica and integrated with [Interactive Brokers](/mathematica).
   .content
-    %h2 Asset Management
-    %p This website is an attempt to track and define investment performance for a set of quantitive trading strategies for a personal investment.  The quantitative strategies are generally evaluated using Mathematica.
+    %table.lgfont
+      %tr
+        %td 
+          Summary    
+          %a(href="/about" ) 
+            %img{:src=>"attachments/OverallResults.jpg", :width => "240", :height=>"180", :alt=>"Summary"}
+        %td 
+          %a(href="/strategies/geographic") 
+            Geographic Strategy
+            %img{:src=>"attachments/worldmap.gif", :width => "240", :height=>"180"}
+      %tr
+        %td     
+          %a(href="/strategies" ) 
+            Strategies
+            %img{:src=>"attachments/OverallResults.jpg", :width => "240", :height=>"180", :alt=>"Strategies"}
+        %td 
+          %a(href="/strategies/geographic") 
+            Geographic Strategy
+            %img{:src=>"attachments/worldmap.gif", :width => "240", :height=>"180"}
+      %tr
+        %td
+          %a(href="/mathematica") 
+            Technology
+            %img{:src=>"attachments/mathematica.png", :width => "200", :height=>"140"}
+        %td
+          %a(href="/strategies/value") 
+            Value
+            %img{:src=>"attachments/bengraham.jpeg", :width => "150", :height=>"200"}
 
-    %p The performance results above are based on actual positions and include all trading costs. As this is my own money their are no incentives to take unreasonable risks and no leverage.
 
-    %p The intent of this website is to provide a rigorous framework for documenting the trading strategies.  I also invite comments/criticisms of any approach.
-
-    %h3 Overall Results
-    %img{:src=>"attachments/OverallResults.jpg", :width => "400", :height=>"300"}
-
-    %h3 Performance over Time
-    %img{:src=>"attachments/Perform1000.jpg", :width => "400", :height=>"300"}
-
-%section.features
-  %heading
-    %h1 Features
-  :markdown
-    * focused on success
-    * limited risk
-    * lowest cost structure
-
-%section.getting-started
-  %heading
-    %h1 Diverse Strategies
-  :markdown
-     * Geographic
-     * Value aka Ben Graham cigar butts
-     * Trend and mean reversion
-     * Mathematic integration to interactive brokers
-
-
-%section.articles= article_summaries(latest_articles)
