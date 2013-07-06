@@ -1,49 +1,6 @@
 <!DOCTYPE html>
 %html(lang="en")
-  %head
-    %meta(charset="utf-8")
-    - if @description
-      %meta(name="description" content=@description)
-    - if @keywords
-      %meta(name="keywords" content=@keywords)
-    %meta(name="viewport" content="initial-scale=1.0, width=device-width")
-    %title= @title
-    <!--[if ! lte IE 6]><!-->
-    %link(href="/css/master.css" media="screen" rel="stylesheet")
-    <!--<![endif]-->
-    /[if lte IE 6]
-      %link(rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection")
-    /[if lt IE 9]
-      %script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
-    - local_stylesheet_link_tag('local')
-    <!-- %link(href="/css/solarized_light.css" media="screen" rel="stylesheet") -->
-    <!--fonts by scott -->
-    %link(href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
-    %link(href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css')
-    %link(href="/articles.xml" rel="alternate" type="application/atom+xml")
-    %script(type="text/javascript" src="http://use.typekit.com/nnr4wgc.js")
-    %script(type="text/javascript")
-      try{Typekit.load();}catch(e){}
-    = haml :analytics, :layout => false
-    %script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js")
-    / %script(type="text/javascript" src="/javascripts/application.js")
-    %script(type="text/javascript" src="http://yandex.st/highlightjs/7.3/highlight.min.js")
-    :javascript
-      hljs.initHighlightingOnLoad();
-    - if Nesta::App.production?
-      :plain
-        <script type="text/javascript" id="inspectletjs">
-          var __insp = __insp || [];
-          __insp.push(['wid', 1962715361]);
-          (function() {
-            function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspect_nojquery/1962715361.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
-            if (window.attachEvent){
-              window.attachEvent('onload', __ldinsp);
-            }else{
-              window.addEventListener('load', __ldinsp, false);
-            }
-          })();
-        </script>
+  = haml :commonlayout, :layout => false
   %body
     :javascript
       var _kiq = _kiq || [];

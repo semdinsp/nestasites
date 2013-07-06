@@ -126,7 +126,7 @@ header[role=banner]
       list-style: none
       li
         @include adjust-font-size($h4-scale, 1, 1, 1)
-        font-weight: 650
+        font-weight: 600
         width: 40%
         &:nth-child(odd)
           float: left
@@ -355,17 +355,24 @@ article.home
         text-align: center
       img
         vertical-align: middle
-      table.lgfont
-        //@include adjust-font-size(2.5, 1, 1, 4/3)
-        margin-left: auto
-        margin-right: auto
-        text-align: center
+        float: right
+      table.lgfont       
         td
-          @include adjust-font-size(3.1, 1, 1, 4/3)
           border: 1px 
+          width: 40em
           vertical-align: middle
           border-style: dashed
-
+          border-color: #E5E2D4
+        p
+          @include adjust-font-size(2.25, 1, 1, 4/3)
+          float: left
+          text-align: left
+          margin-right: 10em
+          vertical-align: middle
+//            max-width: 3em
+//		.info {width:900px;}
+//		.info img {float:right;}
+//		.info p {margin-right:400px;}
 
     &.overview,
     &.features
