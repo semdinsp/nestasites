@@ -3,6 +3,9 @@ about
 strategies
   strategies/geographic
   strategies/value
-mathematica
 technotes
+  technotes/index
+  technotes/resque
+  technotes/sendmail
+  technotes/coffeescript
 contact

@@ -2,4 +2,27 @@ Categories: Notes
 Template: home
 Summary: Technical Notes
 
-%h1 Notes
+%section.overview
+  %heading
+    %h1 Technology
+    :markdown
+      I use [Mathematica](http://wolfram.com) for most of our technology development
+  
+      If you are interested in a bridge between [Mathematica](http://wolfram.com) and [Interactive Brokers ](http://interactivebrokers.com) please contact me for a reasonably priced solution or a free trial. Sample mathematica code is shown below:
+      
+          ibConnection = ibFiconabSimpleWrapper[]; 
+          ibAccountValueHash = {}; 
+          ibAccountPortfolioHash = {}; 
+          ibOrderHash = {}; 
+          orderId = ibPlaceCompleteOrder[ibConnection, "GM", "STK", "BUY", 250, "LMT", 33.2, accountName, "algoName"]
+      
+  
+      I also use [ruby](http://ruby-lang.org) for website and integrated performance reporting.  Most of our reporting and database tools are hosed on Amazon.com services including Amazon's RDS and EC2 services.
+
+/ %section.articles= article_summaries(latest_articles)
+
+#sidebar
+  %heading
+    %h1 Strategies
+    %nav.categories
+      - display_menu(Nesta::Menu.for_path('/technotes'), :class => "menu", :levels => 3)
