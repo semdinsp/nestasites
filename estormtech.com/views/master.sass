@@ -22,10 +22,14 @@ article, aside, footer, header, nav, section
 // Typography
 
 @mixin heading-font
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
+  font-family: 'PT Sans', 'Open Sans', Arial, sans-serif
+//  font-family: Arial, Helvetica, sans-serif
+//  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
 
 @mixin body-font
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
+  font-family: 'Open Sans', Arial, sans-serif
+//  font-family: Arial, Helvetica, sans-serif
+//  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, serif
 
 @mixin text-shadow($color: #DCDBD1)
   text-shadow: 0 2px 5px $color
@@ -64,7 +68,7 @@ h1
 h2
   @include adjust-font-size($h2-scale, 1.0, 0.5)
 h3
-  @include adjust-font-size($h3-scale, 1.0, 0.5)
+  @include adjust-font-size($h3-scale, 1.5, 0.5)
 h4
   @include adjust-font-size($h4-scale, 2, 0)
 
@@ -122,7 +126,7 @@ header[role=banner]
       list-style: none
       li
         @include adjust-font-size($h4-scale, 1, 1, 1)
-        font-weight: 700
+        font-weight: 600
         width: 30%
         &:nth-child(odd)
           float: left
@@ -328,14 +332,47 @@ article.home
       @include adjust-font-size($h2-scale, 1.6, 0.4)
 
     &.intro
+      h1
+        display: none
       p
         width: 80%
         max-width: 23.5em
         margin: 0 auto
         color: $meta-color
-
         @include adjust-font-size($h4-scale, 1, 1, 4/3)
         text-align: center
+
+    &.intro2
+      h1
+        display: none
+      p
+        width: 80%
+        max-width: 23.5em
+        margin: 0 auto
+        color: $meta-color
+        line-height: 3em
+        @include adjust-font-size(3.8, 1, 1, 4/3)
+        text-align: center
+      img
+        vertical-align: middle
+        float: right
+      table.lgfont       
+        td
+          border: 1px 
+          width: 40em
+          vertical-align: middle
+          border-style: dashed
+          border-color: #E5E2D4
+        p
+          @include adjust-font-size(2.25, 1, 1, 4/3)
+          float: left
+          text-align: left
+          margin-right: 10em
+          vertical-align: middle
+//            max-width: 3em
+//		.info {width:900px;}
+//		.info img {float:right;}
+//		.info p {margin-right:400px;}
 
     &.overview,
     &.features
@@ -376,3 +413,4 @@ article.home
         font-weight: bold
 
 @import "layout.sass"
+@import "firstpage.sass"
