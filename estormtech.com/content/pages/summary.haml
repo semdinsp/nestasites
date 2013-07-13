@@ -1,11 +1,10 @@
 Title: Estorm Technology Pte. Ltd
 Template: home
-Layout: toppage
 Link text: Home
 
 %section.intro
   %heading
-    %h1 Estorm
+    %h1 Summary
   :markdown
     Increase sales and never lose track of customer leads. With EstormTech's process oriented approach to customer management tracking leads and sales activities have never been easier.
     
@@ -17,38 +16,49 @@ Link text: Home
     
     Save time and money with a single unified view of customer activities, inventory management including management of time based services.
 
-%section.intro2
-  %header(role="banner")
-    %hgroup 
-      %img{:src=>"attachments/logoestorm.jpg", :width => "80", :height=>"80"}  
+.container-fluid
+  .row-fluid
+    .span9
+      .hero-unit
+        %p hello there
+  .row-fluid
+    .span3
+      %h2 Hosted Software Rationale
+      :markdown
+        * Ease of Software Installation	
+        * Intuitive Software Interface
+        * Support and Training
+        * Competitive Pricing
+        * Database Integrity
+        * Access Security
+        * Change Management 
+    .span3
+      %h2 Streamline business processes
+      :markdown
+        * Improve sales productivity	
+        * Reduce reporting requirements
+        * Mobile CRM access
+        * Prevent loss of accounts due to staff turnover
+        * Track inventory
+    .span3
+      %h2 Features
+      :markdown
+        * deployed on the cloud [Amazon](aws.amazon.com)
+        * customization to suit your business requirements
+        * over four years of operation
+        * integrated solutions to manage customer communications (APN, SMS, Email, etc)
+        * free trial
 
-%section.intro2
+
+
+%section.getting-started
   %heading
-    %h1 Hidden
+    %h1 Diverse Products
   :markdown
-    ...
-
-  .content
-    %table.lgfont
-      %tr
-        %td 
-          %a(href="/summary" ) 
-            %p Summary
-            %img{:src=>"attachments/OverallResults.jpg", :width => "240", :height=>"180", :alt=>"Summary"}
-        %td 
-          %a(href="/strategies/geographic") 
-            %p Geographic Strategy
-            %img{:src=>"attachments/worldmap.gif", :width => "240", :height=>"180"}
-
-      %tr
-        %td
-          %a(href="/technotes") 
-            %p Technology
-            %img{:src=>"attachments/mathematica.png", :width => "200", :height=>"140"}
-        %td
-          %a(href="/strategies/value") 
-            %p Value
-            %img{:src=>"attachments/bengraham.jpeg", :width => "150", :height=>"200"}
+    + Hosted CRM customized to support your business
+    + Distributor tracking
+    + Ticket management
+    + Scratch card data generation
 
 %section.users
   %heading
@@ -67,3 +77,5 @@ Link text: Home
               %cite
                 Frederic,
                 %a(href="http://indosat.com") Indosat.com
+
+%section.articles= article_summaries(latest_articles)
