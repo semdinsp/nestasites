@@ -27,5 +27,5 @@ class LuckyDip
 
 $ ->
   lucky_dip = new LuckyDip($('section.users li'))
-  lucky_dip2 = new LuckyDip($('section.intro p'))
+  lucky_dip2 = new LuckyDip($('section.jumbotron p'))
   lucky_dip.multi_change(lucky_dip,lucky_dip2)
