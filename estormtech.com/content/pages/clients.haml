@@ -2,15 +2,36 @@ Categories: products
 Template: home
 Summary: Client list
 
-%h1 Clients
-%section.overview
-  / %heading
-  / %h1 Clients?
-  :markdown
-    A summary of the various clients.
-
-#sidebar
-  %heading
-    %h1 Strategies
-    %nav.categories
+.container-fluid
+  .row-fluid
+    .span9
+      %h1 Clients
+      %p
+        A summary of our various clients and partners is shown below..
+  .row-fluid
+    - [{:link => "http://www.etpi.com.ph", :image => "easern.png", :text =>"Eastern is a leading telco in Philippines"},{:link => "http://chattimeapp.com", :image => "smartroam.jpg", :text =>"Smartroam has a leading iOS and Android app"},{:link => "http://adfiap.org", :image => "finex.jpg", :text =>"Adfiap has relations with over 100 development banks"}].each do |i|
+      .span3
+        .media
+        %a(href="#{i[:link]}" class="pull-left" ) 
+          %img{:src=>"attachments/partners/#{i[:image]}", :width => "120", :height=>"120", :alt=>"Partner", :class=>"media-object" }
+        .media-body
+          %a(href="#{i[:link]}")
+            %p #{i[:text]}
+    .span3
       - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)
+  .row-fluid
+    - [{:link => "http://www.bni.com", :image => "BNI_logo.jpg", :text =>"BNI is a entreprenuerial networking organization"},{:link => "http://rapengineers.com", :image => "raplogo.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA"},{:link => "http://starhub.com", :image => "starhub.jpg", :text =>"Starhub is Singapore telecom"}].each do |i|
+      .span3
+        .media
+        %a(href="#{i[:link]}" class="pull-left" ) 
+          %img{:src=>"attachments/partners/#{i[:image]}", :width => "120", :height=>"120", :alt=>"Partner", :class=>"media-object" }
+        .media-body
+          %a(href="#{i[:link]}")
+            %p #{i[:text]}
+    .span3
+      %h4 Learn More
+      :markdown
+        * Smartroam [iOS and Androiw](attachments/casestudies/Case_Study_Consultantv2.pdf)
+        * Rap Engineers [Manufacturing and Inventory control](attachments/casestudies/Case_Study_Manufacturingv4.pdf)
+        * Free trial [Easy signup](http://admin.sg.estormtech.com/sites/create_crm)
+
