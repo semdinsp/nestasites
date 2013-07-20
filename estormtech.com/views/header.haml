@@ -8,16 +8,7 @@
         / %a.brand{:href => '/'} EstormTech
         / %img{:src=>"attachments/logoestorm.jpg", :width => "30", :height=>"40"}
         / %h4= @subtitle 
-        .nav-collapse
-          %ul.nav
-          - display_menu(@menu_items, :class => "nav", :levels => 1) 
+      .nav-collapse
+        %ul.nav
+        - display_menu(@menu_items, :class => "nav", :levels => 1) 
 
-/%header(role="banner")
-/  %hgroup
-/    %h1= @heading    
-/    / %img{:src=>"attachments/logoestorm.jpg", :width => "50", :height=>"60"}
-/    %h2= @subtitle   
-/  %nav.primary
-/    - display_menu(@menu_items, :class => "menu", :levels => 1)
-/  %p.links
-/    %a.estorm(href="/") Estorm
