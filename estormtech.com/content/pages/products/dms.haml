@@ -1,22 +1,22 @@
-ategories: dms
+Categories: dms
 Template: home
 Summary: Document Management System
 
-%h1 DMS - Document Management System
+.container-fluid
+  .row-fluid
+    .span9
+      %h1 Document Management System
+      :markdown
+        Our document management system allows you to share documents with your customers and internally with fine grained security control.  You can for example upload a new NDA to the system and ensure that this is the document used by your sales people from now on.  The system provides version control and allows you to exchange comments and meta data around the documents. 
 
-%section.overview
-  :markdown
-    This is based Ben Graham’s  rules of thumb from the Intelligent Investor.
-    
-    ## Performance
-    The attached chart show performance on various dates.
-    
-    ## Trade Process
-    A value screener is created which searches for Low PEs and dividend growth. Some stocks are arbitrarily excluded.
-    
+        The documents can be in any format and can also be part of a work flow.  For example, let's say that you want your customer to approve the document, a workflow can be created such that changes to the document are communicated via email to the customer and the customer can approve or disapprove the document.  Once the document is approved that approval process is tracked in the system.
 
-#sidebar
-  %heading
-    %h1 Strategies
-    %nav.categories
-      - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)
+        The system is hosted on our Amazon.com servers for optimal response rate.  The servers can be hosted on dedicated servers fro the client if needed.
+
+    .span3
+      = haml :product_menu, :layout => false
+
+  .row-fluid
+    .span9
+    .span3
+      = haml :learn_more, :layout => false

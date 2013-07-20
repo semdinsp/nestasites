@@ -1,22 +1,20 @@
 Categories: tms
 Template: home
-Summary: Ticket Management System
+Summary: Ticket/Distributor Management System
 
-%h1 TMS - Ticket Management System
+.container-fluid
+  .row-fluid
+    .span9
+      %h1 TMS - Ticket/Distributor Management System
+      :markdown
+        Extending our ability in scratch card data we have developed a system to track items delivered to a distributor and manage the entire distribution chain and sub dealers.  This can track returns, locations of the distributor/point of sale and other aspects of channel management.
 
-%section.overview
-  :markdown
-    This is based Ben Graham’s  rules of thumb from the Intelligent Investor.
-    
-    ## Performance
-    The attached chart show performance on various dates.
-    
-    ## Trade Process
-    A value screener is created which searches for Low PEs and dividend growth. Some stocks are arbitrarily excluded.
-    
+        We provide this a hosted solution based on monthly subscription model.  We are working to extend this to GPRS connected devices so that paper tickets can be created at the point of sale.
 
-#sidebar
-  %heading
-    %h1 Strategies
-    %nav.categories
-      - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)
+    .span3
+      = haml :product_menu, :layout => false
+
+  .row-fluid
+    .span9
+    .span3
+      = haml :learn_more, :layout => false

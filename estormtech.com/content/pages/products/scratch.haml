@@ -2,21 +2,23 @@ Categories: scratch
 Template: home
 Summary: Scratch Card Data and Mathematics
 
-%h1 Scratch card data and mathematics
+.container-fluid
+  .row-fluid
+    .span9
+      %h1 Scratch Card Data and Mathematics
+      :markdown
+        We have extensive experience running scratch card and trading card promotions.  These include product launches in Cambodia and Laos.  Our software system can accomodate the generation of scratch card data and integration with various secured printers from China and Indonesia at low price points  (2 cents or less per card).  This allows you to create promotions such giving away product and money with various purchases.
 
-%section.overview
-  :markdown
-    This is based Ben Graham’s  rules of thumb from the Intelligent Investor.
-    
-    ## Performance
-    The attached chart show performance on various dates.
-    
-    ## Trade Process
-    A value screener is created which searches for Low PEs and dividend growth. Some stocks are arbitrarily excluded.
-    
+        Our system uses hiqh quality random number generators to ensure fair treatment for the end consumer.
 
-#sidebar
-  %heading
-    %h1 Strategies
-    %nav.categories
-      - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)
+        We also have experience in create purely digital products in a similar manner (eg the consumer purchases a digital product and receives a promotion for this type of solution)
+
+        As this is a specialized solution and generally requires a license to run please contact us directly for further information.  We can also provide consulting in this area to help ensure that the solution is legal.
+
+    .span3
+      = haml :product_menu, :layout => false
+
+  .row-fluid
+    .span9
+    .span3
+      = haml :learn_more, :layout => false
