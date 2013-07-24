@@ -2,20 +2,21 @@ Categories: products
 Template: home
 Summary: Product list
 
-%h1 Products
-%section.overview
-  / %heading
-  / %h1 Strategies?
-  :markdown
-    A summary of the various products and solutions we deliver. 
+.container-flud
+  .row-fluid
+    .span9
+      %h1 Products
+      :markdown
+        A summary of the various products and solutions we deliver. 
 
-    #### Technlogy
-      We use [Mathematica](http://wolfram.com) and [ruby](http://ruby-lang.org) for website and integrated performance reporting for most of our technology development.  Some of our products are developed in [Smalltalk](http://pharo-project.org)
+        #### Technlogy
+        We use [Mathematica](http://wolfram.com) and [ruby](http://ruby-lang.org) for website and integrated performance reporting for most of our technology development.  Some of our products are developed in [Smalltalk](http://pharo-project.org)
 
-      Most of our reporting and database tools are hosed on Amazon.com services including Amazon's RDS and EC2 services.
+        Most of our reporting and database tools are hosed on Amazon.com services including Amazon's RDS and EC2 services.
+    .span3
+      = haml :product_menu, :layout => false
 
-#sidebar
-  %heading
-    %h1 Strategies
-    %nav.categories
-      - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)
+  .row-fluid
+    .span9
+    .span3
+      = haml :learn_more, :layout => false
