@@ -13,15 +13,15 @@ Summary: Client list
           - 1.upto(4)  do |k|
             %li{"data-target"=>"#myCarousel", "data-slide-to"=>"#{k}" }
         .carousel-inner
-          - [{:link => "http://www.etpi.com.ph",:itemstate=>"active", :caption =>"Eastern",:image => "easern.png", :text =>"Eastern is a leading telco in Philippines"},{:link => "http://chattimeapp.com", :itemstate=>"", :caption =>"Smartroam" ,:image => "smartroam.jpg", :text =>"Smartroam has a leading iOS and Android app"},{:link => "http://adfiap.org",:itemstate=>"", :caption =>"Adfiap", :image => "finex.jpg", :text =>"Adfiap has relations with over 100 development banks"}, {:link => "http://www.bni.com",:itemstate=>"", :caption =>"BNI" , :image => "BNI_logo.jpg", :text =>"BNI is a entreprenuerial networking organization"},{:link => "http://rapengineers.com",:itemstate=>"", :caption =>"Rap Engineers" , :image => "raplogo.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA"},].each do |i|
+          - [{:link => "http://www.etpi.com.ph",:itemstate=>"active", :caption =>"Eastern",:image => "eastern.jpg", :text =>"Eastern is a leading telco in Philippines"}, {:link => "http://chattimeapp.com", :itemstate=>"", :caption =>"Smartroam", :image => "smartroam.jpg", :text =>"Smartroam has a leading iOS and Android app"}, {:link => "http://adfiap.org",:itemstate=>"", :caption =>"Adfiap", :image => "adfip.jpg", :text =>"Adfiap has relations with over 100 development banks"}, {:link => "http://www.bni.com",:itemstate=>"", :caption =>"BNI" , :image => "bni.jpg", :text =>"BNI is a entreprenuerial networking organization"},{:link => "http://rapengineers.com",:itemstate=>"", :caption =>"Rap Engineers" , :image => "rap.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA"},].each do |i|
             .item{:class=> "#{i[:itemstate]}" }
-              %img{:src=>"attachments/partners/#{i[:image]}",  :alt=>"" }
+              %img{:src=>"/attachments/partners/#{i[:image]}",  :alt=>"" }
               .container
                 .carousel-caption
                   %h2 #{i[:caption]}
                   %p.lead
                     #{i[:text]}
-                  %a(href="#{i[:link]}" class="btn btn-large btn-primary") 
+                  %a(href="#{i[:link]}" class="btn btn-large") 
                     Visit #{i[:caption]}
         %a{:class=>"left carousel-control", :href=>"#myClientCarousel", "data-slide"=>"prev"}
           <
