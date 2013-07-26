@@ -71,3 +71,51 @@ Link text: Home
                 Frederic,
                 %a(href="http://indosat.com") Indosat.com
 
+
+				.carousel(id="myCarousel" class="slide")
+				  %ol.carousel-indicators
+				    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"0" ,:class=>"active"}
+				    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"1" }
+				    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"2" }
+				    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"3" }
+				  .carousel-inner
+				    .item.active
+				      %img{:src=>"attachments/logoestorm.jpg", :alt=>"" }
+				      .container
+				        .carousel-caption
+				          %h1 Estorm Technology Pte Ltd
+				          %p.lead 
+				            Hosted software, technolgoy and other services
+				          %a(href="/summary" class="btn btn-large btn-primary") 
+				            Review it for yourself
+				    .item
+				      %img{:src=>"attachments/products.jpg", :alt=>"" }
+				      .container
+				        .carousel-caption
+				          %h1 We deliver softwared services and consulting
+				          %p.lead 
+				            Products include hosted CRM, distribution management system, scratch card data generation software and scratch card mathematical analysis..
+				          %a(href="/products" class="btn btn-large btn-primary") 
+				            Find out more about our products
+				    .item
+				      %img{:src=>"attachments/map.jpg", :alt=>"" }
+				      .container
+				        .carousel-caption
+				          %h1 Where are we located
+				          %p.lead 
+				            A Singapore based company providing service across Asia.
+				          %a(href="/contact" class="btn btn-large btn-primary") 
+				            Contact us
+				    .item
+				      %img{:src=>"attachments/map.jpg", :alt=>"" }
+				      .container
+				        .carousel-caption
+				          %h1 Antoher caption
+				          %p.lead 
+				            A Singapore based company providing service across Asia.
+				          %a(href="/contact" class="btn btn-large btn-primary") 
+				            Contact us
+				  %a{:class=>"left carousel-control", :href=>"#myCarousel", "data-slide"=>"prev"}
+				    <
+				  %a{:class=>"right carousel-control" ,:href=>"#myCarousel", "data-slide"=>"next"}
+				    >

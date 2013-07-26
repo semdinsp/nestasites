@@ -2,32 +2,35 @@ Categories: products
 Template: home
 Summary: Client list
 
+%h1 Clients
+
 .container-fluid
   .row-fluid
     .span9
-      %h1 Clients
-      %p
-        A summary of our various clients and partners is shown below..
-  .row-fluid
-    - [{:link => "http://www.etpi.com.ph", :image => "easern.png", :text =>"Eastern is a leading telco in Philippines"},{:link => "http://chattimeapp.com", :image => "smartroam.jpg", :text =>"Smartroam has a leading iOS and Android app"},{:link => "http://adfiap.org", :image => "finex.jpg", :text =>"Adfiap has relations with over 100 development banks"}].each do |i|
-      .span3
-        .media
-        %a(href="#{i[:link]}" class="pull-left" ) 
-          %img{:src=>"attachments/partners/#{i[:image]}", :width => "120", :height=>"120", :alt=>"Partner", :class=>"media-object" }
-        .media-body
-          %a(href="#{i[:link]}")
-            %p #{i[:text]}
+      .carousel(id="myClientCarousel" class="slide")
+        %ol.carousel-indicators
+          %li{"data-target"=>"#myClientCarousel", "data-slide-to"=>"0" ,:class=>"active"}
+          - 1.upto(4)  do |k|
+            %li{"data-target"=>"#myCarousel", "data-slide-to"=>"#{k}" }
+        .carousel-inner
+          - [{:link => "http://www.etpi.com.ph",:itemstate=>"active", :caption =>"Eastern",:image => "easern.png", :text =>"Eastern is a leading telco in Philippines"},{:link => "http://chattimeapp.com", :itemstate=>"", :caption =>"Smartroam" ,:image => "smartroam.jpg", :text =>"Smartroam has a leading iOS and Android app"},{:link => "http://adfiap.org",:itemstate=>"", :caption =>"Adfiap", :image => "finex.jpg", :text =>"Adfiap has relations with over 100 development banks"}, {:link => "http://www.bni.com",:itemstate=>"", :caption =>"BNI" , :image => "BNI_logo.jpg", :text =>"BNI is a entreprenuerial networking organization"},{:link => "http://rapengineers.com",:itemstate=>"", :caption =>"Rap Engineers" , :image => "raplogo.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA"},].each do |i|
+            .item{:class=> "#{i[:itemstate]}" }
+              %img{:src=>"attachments/partners/#{i[:image]}",  :alt=>"" }
+              .container
+                .carousel-caption
+                  %h2 #{i[:caption]}
+                  %p.lead
+                    #{i[:text]}
+                  %a(href="#{i[:link]}" class="btn btn-large btn-primary") 
+                    Visit #{i[:caption]}
+        %a{:class=>"left carousel-control", :href=>"#myClientCarousel", "data-slide"=>"prev"}
+          <
+        %a{:class=>"right carousel-control" ,:href=>"#myClientCarousel", "data-slide"=>"next"}
+          >
     .span3
       = haml :product_menu, :layout => false
-  .row-fluid
-    - [{:link => "http://www.bni.com", :image => "BNI_logo.jpg", :text =>"BNI is a entreprenuerial networking organization"},{:link => "http://rapengineers.com", :image => "raplogo.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA"},{:link => "http://starhub.com", :image => "starhub.jpg", :text =>"Starhub is Singapore telecom"}].each do |i|
-      .span3
-        .media
-        %a(href="#{i[:link]}" class="pull-left" ) 
-          %img{:src=>"attachments/partners/#{i[:image]}", :width => "120", :height=>"120", :alt=>"Partner", :class=>"media-object" }
-        .media-body
-          %a(href="#{i[:link]}")
-            %p #{i[:text]}
-    .span3
       = haml :learn_more, :layout => false
+/  .row-fluid
+/    .offset9.span3
+      
 

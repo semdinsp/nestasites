@@ -22,56 +22,30 @@ Link text: Home
         Distributor and inventory management (managing products at the distributor level)
 
         Save time and money with a single unified view of customer activities, inventory management including management of time based services.
-
-.carousel(id="myCarousel" class="slide")
-  %ol.carousel-indicators
-    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"0" ,:class=>"active"}
-    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"1" }
-    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"2" }
-  .carousel-inner
-    .item.active
-      %img{:src=>"attachments/logoestorm.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 Estorm Technology Pte Ltd
-          %p.lead 
-            Hosted software, technolgoy and other services
-          %a(href="/summary" class="btn btn-large btn-primary") 
-            Review it for yourself
-    .item
-      %img{:src=>"attachments/products.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 We deliver softwared services and consulting
-          %p.lead 
-            Products include hosted CRM, distribution management system, scratch card data generation software and scratch card mathematical analysis..
-          %a(href="/products" class="btn btn-large btn-primary") 
-            Find out more about our products
-    .item
-      %img{:src=>"attachments/map.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 Where are we located
-          %p.lead 
-            A Singapore based company providing service across Asia.
-          %a(href="/contact" class="btn btn-large btn-primary") 
-            Contact us
-    .item
-      %img{:src=>"attachments/map.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 Antoher caption
-          %p.lead 
-            A Singapore based company providing service across Asia.
-          %a(href="/contact" class="btn btn-large btn-primary") 
-            Contact us
-  %a{:class=>"left carousel-control", :href=>"#myCarousel", "data-slide"=>"prev"}
-    <
-  %a{:class=>"right carousel-control" ,:href=>"#myCarousel", "data-slide"=>"next"}
-    >
-     
-
 .container-fluid
+  .row-fluid
+    .span12
+      .carousel(id="myCarousel" class="slide")
+        %ol.carousel-indicators
+          %li{"data-target"=>"#myCarousel", "data-slide-to"=>"0" ,:class=>"active"}
+          - 1.upto(3)  do |k|
+            %li{"data-target"=>"#myCarousel", "data-slide-to"=>"#{k}" }
+        .carousel-inner
+          - [{:link => "/summary",:itemstate=>"active", :caption =>"Estorm Technology Pte. Ltd",:image => "estormmain.jpg", :text =>"Hosted software, technolgoy and other services"},{:link => "/products", :itemstate=>"", :caption =>"Products" ,:image => "products.jpg", :text =>"We deliver software as a service (SAAS) products (CRM/TMS) and other mathematical services"},{:link => "/clients",:itemstate=>"", :caption =>"Clients", :image => "clients.jpg", :text =>"We have a wide range of happy clients that are regionally dispersed (Laos, Philippines, Singpore, Indonesia)"}, {:link => "/contact",:itemstate=>"", :caption =>"Contact Details" , :image => "map2.jpg", :text =>"We are easily contactable and have a conveniently located office in downtown Singapore"}].each do |i|
+            .item{:class=> "#{i[:itemstate]}" }
+              %img{:src=>"/attachments/#{i[:image]}",  :alt=>"" }
+              .container
+                .carousel-caption
+                  %h2 #{i[:caption]}
+                  %p.lead
+                    #{i[:text]}
+                  %a(href="#{i[:link]}" class="btn btn-large") 
+                    Visit #{i[:caption]}
+        %a{:class=>"left carousel-control", :href=>"#myCarousel", "data-slide"=>"prev"}
+          <
+        %a{:class=>"right carousel-control" ,:href=>"#myCarousel", "data-slide"=>"next"}
+          >
+
   .row-fluid
     .span9
       %section.lucky2
@@ -85,7 +59,7 @@ Link text: Home
                 %a(href="http://chattimeapp.com") Chattime.com
           %li
             %blockquote
-              “Estorm's solution allows us to offer on demand crm to our customers and billing integration with our prepaid platform and our customer's mobile phones.”
+              “Estorm's solution allows us to offer on demand CRM to our customers and billing integration with our prepaid platform and our customer's mobile phones via sms.”
               %cite
                 Frederic,
                 %a(href="http://indosat.com") Indosat.com
