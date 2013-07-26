@@ -23,55 +23,40 @@ Link text: Home
 
         Save time and money with a single unified view of customer activities, inventory management including management of time based services.
 
-.carousel(id="myCarousel" class="slide")
-  %ol.carousel-indicators
-    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"0" ,:class=>"active"}
-    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"1" }
-    %li{"data-target"=>"#myCarousel", "data-slide-to"=>"2" }
-  .carousel-inner
-    .item.active
-      %img{:src=>"attachments/logoestorm.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 Estorm Technology Pte Ltd
-          %p.lead 
-            Hosted software, technolgoy and other services
-          %a(href="/summary" class="btn btn-large btn-primary") 
-            Review it for yourself
-    .item
-      %img{:src=>"attachments/products.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 We deliver softwared services and consulting
-          %p.lead 
-            Products include hosted CRM, distribution management system, scratch card data generation software and scratch card mathematical analysis..
-          %a(href="/products" class="btn btn-large btn-primary") 
-            Find out more about our products
-    .item
-      %img{:src=>"attachments/map.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 Where are we located
-          %p.lead 
-            A Singapore based company providing service across Asia.
-          %a(href="/contact" class="btn btn-large btn-primary") 
-            Contact us
-    .item
-      %img{:src=>"attachments/map.jpg", :alt=>"" }
-      .container
-        .carousel-caption
-          %h1 Antoher caption
-          %p.lead 
-            A Singapore based company providing service across Asia.
-          %a(href="/contact" class="btn btn-large btn-primary") 
-            Contact us
-  %a{:class=>"left carousel-control", :href=>"#myCarousel", "data-slide"=>"prev"}
-    <
-  %a{:class=>"right carousel-control" ,:href=>"#myCarousel", "data-slide"=>"next"}
-    >
-     
-
 .container-fluid
+  .row-fluid
+    %ul.thumbnails
+      %li.span6
+        .thumbnail
+          %a(href="/summary" class="pull-left" ) 
+            %img{:src=>"attachments/logoestorm.jpg", :width => "120", :height=>"120", :alt=>"Summary", :class=>"img-polaroid" }
+          %a(href="/summary" ) 
+            %h2 Summary
+          %p Estorm overview.
+      %li.span6
+        .thumbnail
+          %a(href="/products" class="pull-left" ) 
+            %img{:src=>"attachments/logoestorm.jpg", :width => "120", :height=>"120", :alt=>"Summary", :class=>"img-polaroid" }
+          %a(href="/products" ) 
+            %h2 Products
+          %p Products include hosted CRM, distribution management system, scratch card data generation software and scratch card mathematical analysis.
+  .row-fluid
+    .span6
+      .media
+      %a(href="/support" class="pull-left" ) 
+        %img{:src=>"attachments/logoestorm.jpg", :width => "120", :height=>"120", :alt=>"Summary", :class=>"media-object" }
+      .media-body
+        %a(href="/support" ) 
+          %h2.media-heading Support
+          %p We provide extensive support for our customers including an online ticketing system and telephone support.
+    .span6
+      .media
+      %a(href="/contact" class="pull-left" ) 
+        %img{:src=>"attachments/map.jpg", :width => "120", :height=>"120", :alt=>"Summary", :class=>"media-object" }
+      .media-body
+        %a(href="/contact" ) 
+          %h2.media-heading Contact us
+          %p We will promptly get back to you.
   .row-fluid
     .span9
       %section.lucky2

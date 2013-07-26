@@ -18,7 +18,7 @@ Summary: Client list
           %a(href="#{i[:link]}")
             %p #{i[:text]}
     .span3
-      - display_menu(Nesta::Menu.for_path('/products'), :class => "menu", :levels => 3)
+      = haml :product_menu, :layout => false
   .row-fluid
     - [{:link => "http://www.bni.com", :image => "BNI_logo.jpg", :text =>"BNI is a entreprenuerial networking organization"},{:link => "http://rapengineers.com", :image => "raplogo.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA"},{:link => "http://starhub.com", :image => "starhub.jpg", :text =>"Starhub is Singapore telecom"}].each do |i|
       .span3
@@ -29,9 +29,5 @@ Summary: Client list
           %a(href="#{i[:link]}")
             %p #{i[:text]}
     .span3
-      %h4 Learn More
-      :markdown
-        * Smartroam [iOS and Androiw](attachments/casestudies/Case_Study_Consultantv2.pdf)
-        * Rap Engineers [Manufacturing and Inventory control](attachments/casestudies/Case_Study_Manufacturingv4.pdf)
-        * Free trial [Easy signup](http://admin.sg.estormtech.com/sites/create_crm)
+      = haml :learn_more, :layout => false
 
