@@ -2,7 +2,7 @@ Categories: products
 Template: home
 Summary: Client list
 
-%h1 Clients
+%h1 Clients and Partners
 
 .container-fluid
   .row-fluid
@@ -13,7 +13,7 @@ Summary: Client list
           - 1.upto(4)  do |k|
             %li{"data-target"=>"#myCarousel", "data-slide-to"=>"#{k}" }
         .carousel-inner
-          - [{:link => "http://www.etpi.com.ph",:itemstate=>"active", :caption =>"Eastern",:image => "eastern.jpg", :text =>"Eastern is a leading telco in Philippines"}, {:link => "http://chattimeapp.com", :itemstate=>"", :caption =>"Smartroam", :image => "smartroam.jpg", :text =>"Smartroam has a leading iOS and Android app"}, {:link => "http://adfiap.org",:itemstate=>"", :caption =>"Adfiap", :image => "adfip.jpg", :text =>"Adfiap has relations with over 100 development banks"}, {:link => "http://www.bni.com",:itemstate=>"", :caption =>"BNI" , :image => "bni.jpg", :text =>"BNI is a entreprenuerial networking organization"},{:link => "http://rapengineers.com",:itemstate=>"", :caption =>"Rap Engineers" , :image => "rap.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA"},].each do |i|
+          - [{:link => "http://www.etpi.com.ph",:itemstate=>"active", :caption =>"Eastern",:image => "eastern.jpg", :text =>"Eastern is a leading telco in Philippines. Estorm delivered a packaged solution for Eastern's end SME customers"}, {:link => "http://chattimeapp.com", :itemstate=>"", :caption =>"Smartroam", :image => "smartroam.jpg", :text =>"Smartroam has a leading iOS and Android app.  Estorm managed all of their emails and apple push notifications"}, {:link => "http://adfiap.org",:itemstate=>"", :caption =>"Adfiap", :image => "adfip.jpg", :text =>"Adfiap has relations with over 100 development banks. Estorm worked with Adfiap at many conferences delivering systems to manage SME performance"}, {:link => "http://www.bni.com",:itemstate=>"", :caption =>"BNI" , :image => "bni.jpg", :text =>"BNI is a entrepreneurial networking organisation.  Estorm managed the customer contacts with one chapter"},{:link => "http://rapengineers.com",:itemstate=>"", :caption =>"Rap Engineers" , :image => "rap.jpg", :text =>"Rap Engeineers provides mechanical fixtures across SEA.  Estorm's solution managed their inventory of over 9000 parts"},].each do |i|
             .item{:class=> "#{i[:itemstate]}" }
               %img{:src=>"/attachments/partners/#{i[:image]}",  :alt=>"" }
               .container
