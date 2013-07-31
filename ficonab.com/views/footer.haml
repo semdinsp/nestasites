@@ -1,5 +1,25 @@
-%footer.branding
-  %p
-    Developed by Scott with Nesta, a
-    = succeed "." do
-      %a(href="http://nestacms.com") Ruby CMS
+%script(type="text/javascript" src="http://code.jquery.com/jquery.js")
+%script(type="text/javascript" src="/bootstrap/js/bootstrap.min.js")
+
+%br
+%br
+.footer
+  .accordian#footeraccordian
+    .accordian-group
+      .accordian-heading
+      %a{:class=>"accordion-toggle", "data-toggle"=>"collapse" , "data-parent"=>"#footeraccordian", :href=>"#collapseOne"}
+        .small
+          Version, Copyright and System information
+      #collapseOne{:class=> "accordion-body collapse"}
+        .accordion-inner
+          %h6 
+            = "Version: " + "1.4"
+          %img(src="/attachments/ficonab.jpg" width=80 height=30 alt='estorm logo')
+          %a(href='http://www.ficonab.com')
+          %h6 Copyright Ficonab  Pte. Ltd. 2013
+          %p
+            %small
+              Developed by Scott with Nesta, a
+              = succeed "." do
+                %a(href="http://nestacms.com") Ruby CMS
+              using the twitter bootstrap css theme to provide responsive support on various devices.

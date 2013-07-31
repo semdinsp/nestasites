@@ -3,19 +3,13 @@ Template: home
 Summary: Technical Notes
 Date: 7 July 2011
 
-%section.overview
-  %heading
-    %h1 Manually running a resque worker.
-    :markdown
-      Creating a worker for resque to run it manually. Change to the root directory of the rails app.
+.container-fluid
+  .row-fluid
+    .span9
+      %h1 Manually running a resque worker.
+      :markdown
+        Creating a worker for resque to run it manually. Change to the root directory of the rails app.
 
-          RAILS_ENV=production QUEUES="bisa_mimi_status,bisa_acquisition,bisa_promotion,bisa_automata" rake environment resque:work
-
-//%pre
-//  %code RAILS_ENV=production QUEUES="bisa_mimi_status,bisa_acquisition,bisa_promotion,bisa_automata" rake environment resque:work
-
-#sidebar
-  %heading
-    %h1 Strategies
-    %nav.categories
-      - display_menu(Nesta::Menu.for_path('/technotes'), :class => "menu", :levels => 3)
+            RAILS_ENV=production QUEUES="bisa_mimi_status,bisa_acquisition,bisa_promotion,bisa_automata" rake environment resque:work
+    .span3
+      = haml :technote_menu, :layout => false
