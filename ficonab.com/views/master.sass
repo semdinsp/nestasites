@@ -229,6 +229,7 @@ article
 article[role="main"]
   h1, h2
     @include text-shadow
+    @include adjust-font-size($h2-scale, 1.5, 0.5)
 
   div#disqus_thread
     img
@@ -259,6 +260,7 @@ section.articles
   article
     h1
       font-weight: normal
+      @include adjust-font-size($h3-scale, 1.5, 0.5)
       text-shadow: none
       a
         text-decoration: none
@@ -329,7 +331,7 @@ article.home
   section
 
     h1
-      @include adjust-font-size($h2-scale, 1.6, 0.4)
+      @include adjust-font-size($h1-scale, 1.6, 0.4)
 
     &.intro
       h1

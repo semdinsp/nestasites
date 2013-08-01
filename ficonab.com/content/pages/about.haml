@@ -13,38 +13,40 @@ Link text: About
           :markdown
             An algorithmic trading solution using Mathematica and integrated with interactive brokers.
 
-%section.overview
-  %heading
-  .content
-    %h2 Asset Management
-    %p This website is an attempt to track and define investment performance for a set of quantitive trading strategies for a personal investment.  The quantitative strategies are generally evaluated using Mathematica.
+  .row-fluid
+    .span9
+      %h2 Asset Management
+      %p This website is an attempt to track and define investment performance for a set of quantitive trading strategies for a personal investment.  The quantitative strategies are generally evaluated using Mathematica.
 
-    %p The performance results above are based on actual positions and include all trading costs. As this is my own money their are no incentives to take unreasonable risks and no leverage.
+      %p The performance results above are based on actual positions and include all trading costs. As this is my own money their are no incentives to take unreasonable risks and no leverage.
 
-    %p The intent of this website is to provide a rigorous framework for documenting the trading strategies.  I also invite comments/criticisms of any approach.
+      %p The intent of this website is to provide a rigorous framework for documenting the trading strategies.  I also invite comments/criticisms of any approach.
 
-    %h3 Overall Results
-    %img{:src=>"attachments/OverallResults.jpg", :width => "400", :height=>"300"}
+      %h3 Overall Results
+      %img{:src=>"attachments/OverallResults.jpg", :width => "400", :height=>"300"}
 
-    %h3 Performance over Time
-    %img{:src=>"attachments/Perform1000.jpg", :width => "400", :height=>"300"}
+      %h3 Performance over Time
+      %img{:src=>"attachments/Perform1000.jpg", :width => "400", :height=>"300"}
 
-%section.features
-  %heading
-    %h1 Features
-  :markdown
-    * focused on success
-    * limited risk
-    * lowest cost structure
+    .span3
+      %h2 Features
+      :markdown
+        * focused on success
+        * limited risk
+        * lowest cost structure
+      %h2 Diverse Strategies
+      :markdown
+        * Geographic
+        * Value aka Ben Graham cigar butts
+        * Trend and mean reversion
+        * Mathematic integration to interactive brokers
+      = haml :strategy_menu, :layout => false
 
-%section.getting-started
-  %heading
-    %h1 Diverse Strategies
-  :markdown
-     * Geographic
-     * Value aka Ben Graham cigar butts
-     * Trend and mean reversion
-     * Mathematic integration to interactive brokers
+  .row-fluid
+    .span9
+      %h2 Latest Technical Notes
+      = article_summaries(latest_articles)
+    .span3
+      /= haml :strategy_menu, :layout => false
 
 
-%section.articles= article_summaries(latest_articles)
