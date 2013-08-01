@@ -4,6 +4,7 @@ products
   products/crm
   products/scratch
   products/tms
+  products/sms
   products/dms
 support
 clients

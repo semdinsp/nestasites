@@ -10,16 +10,7 @@ Link text: Summary
     %section.jumbotron
       %section.hero-unit
         %section.lucky1
-          :markdown
-            Increase sales and never lose track of customer leads. With EstormTech's process oriented approach to customer management tracking leads and sales activities have never been easier.
-
-            Scratch card data generation and management of scratch cards at the distributor and point of sale level.
-
-            No hidden costs using our affordable monthly subscriptions.  (Our charges are likely less than the cost of your mobile phone bill)
-
-            Distributor and inventory management (managing products at the distributor level)
-
-            Save time and money with a single unified view of customer activities, inventory management including management of time based services.
+          = haml :marketing_tags, :layout => false
 
   /.container-fluid
   .row-fluid
@@ -55,7 +46,8 @@ Link text: Summary
         + Hosted CRM customized to support your business
         + Distributor tracking
         + Ticket management
-        + Scratch card data generation
+        + Scratch Card and Lottery data generation
+        + SMS based solutions
   .row-fluid
     .span9
       %section.lucky2
