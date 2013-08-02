@@ -6,19 +6,11 @@
     %meta(name="keywords" content=@keywords)
   %meta(name="viewport" content="initial-scale=1.0, width=device-width")
   %title= @title
-  <!--[if ! lte IE 6]><!-->
-  %link(href="/css/master.css" media="screen" rel="stylesheet")
-  <!--<![endif]-->
-  /[if lte IE 6]
-    %link(rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection")
-  /[if lt IE 9]
-    %script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
-  - local_stylesheet_link_tag('local')
-  %link(href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen")
-  %link(href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen")
+  / - local_stylesheet_link_tag('local')
+  %link(href="/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen")
   %link(href="/css/bootstrap_customization.css" media="screen" rel="stylesheet") 
   %link(href="/css/firstpage.css" media="screen" rel="stylesheet")
-  %link(href="/css/solarized.css" media="screen" rel="stylesheet") 
+  / %link(href="/css/solarized.css" media="screen" rel="stylesheet") 
   %link(href="/articles.xml" rel="alternate" type="application/atom+xml")
   <!--fonts by scott -->
   %link(href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
@@ -33,11 +25,6 @@
   %script(type="text/javascript")
     try{Typekit.load();}catch(e){}
   = haml :analytics, :layout => false
-  %script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js")
-  / %script(type="text/javascript" src="/javascripts/application.js")
-  %script(type="text/javascript" src="http://yandex.st/highlightjs/7.3/highlight.min.js")
-  :javascript
-    hljs.initHighlightingOnLoad();
   - if false
     :plain
       <script type="text/javascript" id="inspectletjs">

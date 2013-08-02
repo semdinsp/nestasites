@@ -3,27 +3,31 @@ Template: home
 Layout: toppage
 Link text: Home
 
-.container-fluid
-  .span3
+.container
+  .col-lg-3
     %a(class="brand" href="/summary")
       %img( src="/attachments/estormcrm.jpg" width=35 height=16 alt='estorm logo')
       = @heading
 
 %section.jumbotron
-  %section.hero-unit
-    %section.lucky1
-      = haml :marketing_tags, :layout => false
+  %section.lucky1
+    = haml :marketing_tags, :layout => false
 
-.container-fluid
-  .row-fluid
-    .span12
+.container
+  
+  .row
+    .col-offset-2.col-lg-7
+      %section.lucky2
+        = haml :estorm_users, :layout => false
+  .row
+    .col-offset-1.col-lg-10
       .carousel(id="myCarousel" class="slide")
         %ol.carousel-indicators
           %li{"data-target"=>"#myCarousel", "data-slide-to"=>"0" ,:class=>"active"}
           - 1.upto(3)  do |k|
             %li{"data-target"=>"#myCarousel", "data-slide-to"=>"#{k}" }
         .carousel-inner
-          - [{:link => "/summary",:itemstate=>"active", :caption =>"Estorm Technology Pte. Ltd",:image => "estormmain.jpg", :text =>"Hosted software, technology and other services"},{:link => "/products", :itemstate=>"", :caption =>"Products" ,:image => "products.jpg", :text =>"We deliver software as a service (SAAS) products (CRM/TMS) and other mathematical services like random data for scratch cards"},{:link => "/clients",:itemstate=>"", :caption =>"Clients", :image => "clients.jpg", :text =>"We have a wide range of happy clients that are regionally dispersed (Laos, Philippines, Singapore, Indonesia)"}, {:link => "/contact",:itemstate=>"", :caption =>"Contact Details" , :image => "map2.jpg", :text =>"We are easily contactable and have a conveniently located office in downtown Singapore"}].each do |i|
+          - [{:link => "/summary",:itemstate=>"active", :caption =>"Estorm Technology Pte. Ltd",:image => "estormmain.jpg", :text =>"Hosted software, technology and other services"},{:link => "/products", :itemstate=>"", :caption =>"Products" ,:image => "products.jpg", :text =>"We deliver software as a service (SAAS) products (CRM/TMS), SMS solutions and other mathematical services like random data for scratch cards"},{:link => "/clients",:itemstate=>"", :caption =>"Clients", :image => "clients.jpg", :text =>"We have a wide range of happy clients that are regionally dispersed (Laos, Philippines, Singapore, Indonesia)"}, {:link => "/contact",:itemstate=>"", :caption =>"Contact Details" , :image => "map2.jpg", :text =>"We are easily contactable and have a conveniently located office in downtown Singapore"}].each do |i|
             .item{:class=> "#{i[:itemstate]}" }
               %img{:src=>"/attachments/#{i[:image]}",  :alt=>"" }
               .container
@@ -31,15 +35,12 @@ Link text: Home
                   %h2 #{i[:caption]}
                   %p.lead
                     #{i[:text]}
-                  %a(href="#{i[:link]}" class="btn btn-large") 
+                  %a(href="#{i[:link]}" class="btn btn-info btn-large") 
                     Visit #{i[:caption]}
         %a{:class=>"left carousel-control", :href=>"#myCarousel", "data-slide"=>"prev"}
           <
         %a{:class=>"right carousel-control" ,:href=>"#myCarousel", "data-slide"=>"next"}
           >
 
-  .row-fluid
-    .span9
-      %section.lucky2
-        = haml :estorm_users, :layout => false
+  
 

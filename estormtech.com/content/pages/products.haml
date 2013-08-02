@@ -2,25 +2,22 @@ Categories: products
 Template: home
 Summary: Product list
 
-.container-flud
-  .row-fluid
-    .span9
+.container
+  .row
+    .col-lg-8
       %h1 Products
       :markdown
         A summary of the various products and solutions we deliver. 
 
         #### Technlogy
-        We use [Mathematica](http://wolfram.com) and [ruby](http://ruby-lang.org) for website and integrated performance reporting for most of our technology development.  Some of our products are developed in [Smalltalk](http://pharo-project.org)
+        We use [Mathematica](http://wolfram.com) and [Ruby](http://ruby-lang.org) for website and integrated performance reporting for most of our technology development.  Some of our products are developed in [Smalltalk](http://pharo-project.org)
         #### Databases and Reporting
         Most of our reporting and database tools are hosed on Amazon.com services including Amazon's RDS and EC2 services.
         #### CSS
         The majority of our solutions use Twitter's bootstrap css so that the layout is responsive and adjusts appropriately depending on device screen width.  You can see this in action if you shrink your browser window down or visit this site on a mobile phone.  The menu at the top changes style to a drop down list and the content of the site reorganises to fit the screen.
         #### Testing and Version Control
-        We use [github](http://github.com) for version control including this (website)[http://github.com/semdinsp]. Proprietary solutions are hosted on github privately. Testing is automated where possible and we are moving to 'spec' based development.
-    .span3
+        We use [github](http://github.com) for version control including this [website](http://github.com/semdinsp/nestasites). Proprietary solutions are hosted on github privately. Testing is automated where possible and we are moving to 'spec' based development.
+    .col-lg-4
       = haml :product_menu, :layout => false
-
-  .row-fluid
-    .span9
-    .span3
       = haml :learn_more, :layout => false
+

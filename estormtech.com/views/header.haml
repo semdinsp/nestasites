@@ -1,15 +1,15 @@
 /.navbar.navbar-fixed-top
 .navbar
-  .navbar-inner
-    .container
-      %a.btn.btn-navbar{ "data-toggle".to_sym => "collapse", "data-target".to_sym => ".nav-collapse"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a(class="brand" href="/")
-        %img( src="/attachments/estormcrm.jpg" width=35 height=16 alt='estorm logo')
+  .container
+    %button.navbar-toggle{:type => "button", "data-toggle" => "collapse", "data-target" => ".navbar-responsive-collapse"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a(class="navbar-brand" href="/")
+      .span
+        %img( src="/attachments/estormcrm.jpg" width=23 height=23 alt='estorm logo')
         = @heading
-      .nav-collapse.collapse
-        / %ul.nav
-        - display_menu(@menu_items, :class => "nav", :levels => 1) 
+    .nav-collapse.collapse.navbar-responsive-collapse
+      - display_menu(@menu_items, :class => "nav nav-justified", :levels => 1) 
+
 

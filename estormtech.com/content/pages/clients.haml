@@ -2,11 +2,12 @@ Categories: products
 Template: home
 Summary: Client list
 
-%h1 Clients and Partners
 
-.container-fluid
-  .row-fluid
-    .span9
+
+.container
+  %h1 Clients and Partners
+  .row
+    .col-lg-9
       .carousel(id="myClientCarousel" class="slide")
         %ol.carousel-indicators
           %li{"data-target"=>"#myClientCarousel", "data-slide-to"=>"0" ,:class=>"active"}
@@ -21,13 +22,13 @@ Summary: Client list
                   %h2 #{i[:caption]}
                   %p.lead
                     #{i[:text]}
-                  %a(href="#{i[:link]}" class="btn btn-large") 
+                  %a(href="#{i[:link]}" class="btn btn-info btn-large") 
                     Visit #{i[:caption]}
         %a{:class=>"left carousel-control", :href=>"#myClientCarousel", "data-slide"=>"prev"}
           <
         %a{:class=>"right carousel-control" ,:href=>"#myClientCarousel", "data-slide"=>"next"}
           >
-    .span3
+    .col-lg-3
       = haml :product_menu, :layout => false
       = haml :learn_more, :layout => false
 /  .row-fluid

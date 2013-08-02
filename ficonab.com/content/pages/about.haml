@@ -3,9 +3,9 @@ Template: home
 Link text: About
 
 
-.container-fluid
+.container
   .row-fluid
-    .span10
+    .col-offset-1.col-lg-10
       .hero-unit
         %section.intro
           %heading
@@ -13,8 +13,8 @@ Link text: About
           :markdown
             An algorithmic trading solution using Mathematica and integrated with interactive brokers.
 
-  .row-fluid
-    .span9
+  .row
+    .col-lg-9
       %h2 Asset Management
       %p This website is an attempt to track and define investment performance for a set of quantitive trading strategies for a personal investment.  The quantitative strategies are generally evaluated using Mathematica.
 
@@ -28,7 +28,7 @@ Link text: About
       %h3 Performance over Time
       %img{:src=>"attachments/Perform1000.jpg", :width => "400", :height=>"300"}
 
-    .span3
+    .col-lg-3
       %h2 Features
       :markdown
         * focused on success
@@ -42,11 +42,11 @@ Link text: About
         * Mathematic integration to interactive brokers
       = haml :strategy_menu, :layout => false
 
-  .row-fluid
-    .span9
+  .row
+    .col-lg-9
       %h2 Latest Technical Notes
       = article_summaries(latest_articles)
-    .span3
+    .col-lg-3
       /= haml :strategy_menu, :layout => false
 
 

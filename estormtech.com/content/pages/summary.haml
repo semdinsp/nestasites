@@ -2,19 +2,19 @@ Title: Estorm Technology Pte. Ltd
 Template: home
 Link text: Summary
 
-.container-fluid
-  .row-fluid
+.container
+  .row
     %h1 
       Services Summary
-  .row-fluid
+  .row
     %section.jumbotron
       %section.hero-unit
         %section.lucky1
           = haml :marketing_tags, :layout => false
 
   /.container-fluid
-  .row-fluid
-    .span3
+  .row
+    .col-lg-3
       %h2 Hosted Software Rationale
       :markdown
         * Ease of Software Installation	
@@ -24,7 +24,7 @@ Link text: Summary
         * Database Integrity
         * Access Security
         * Change Management 
-    .span3
+    .col-lg-3
       %h2 Streamline business processes
       :markdown
         * Improve sales productivity	
@@ -32,7 +32,7 @@ Link text: Summary
         * Mobile CRM access
         * Prevent loss of accounts due to staff turnover
         * Track inventory
-    .span3
+    .col-lg-3
       %h2 Features
       :markdown
         * deployed on the cloud [Amazon](aws.amazon.com)
@@ -40,7 +40,7 @@ Link text: Summary
         * over four years of operation
         * integrated solutions to manage customer communications (APN, SMS, Email, etc)
         * free trial
-    .span3
+    .col-lg-3
       %h2 Diverse Products
       :markdown
         + Hosted [CRM](/products/crm) customized to support your business
@@ -48,8 +48,8 @@ Link text: Summary
         + [Ticket](products/tms) management
         + [Scratch Card](/products/scratch) and Lottery data generation
         + [SMS](/products/sms) based solutions
-  .row-fluid
-    .span9
+  .row
+    .col-lg-9
       %section.lucky2
         = haml :estorm_users, :layout => false
 

@@ -3,9 +3,9 @@ Template: home
 Summary: Configure mathematica to sendmail on the Mac OS X
 Date: 7 July 2011
 
-.container-fluid
-  .row-fluid
-    .span9
+.container
+  .row
+    .col-lg-9
       %h1 Using mathematica to send emails on a Mac OS X
 
       %p I have had problems with mathematica on versions 7,8,9 using sendmail to a remote server or gmail.  The best solution i have found so far is to configure postfix and send via localhost.
@@ -17,6 +17,6 @@ Date: 7 July 2011
           sudo launchctl unload /System/Library/LaunchDaemons/org.postfix.master.plist
           sudo launchctl load /System/Library/LaunchDaemons/org.postfix.master.plist
         
-    .span3
+    .col-lg-3
       = haml :technote_menu, :layout => false
 

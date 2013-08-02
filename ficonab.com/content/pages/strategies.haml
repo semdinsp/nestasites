@@ -3,14 +3,14 @@ Template: home
 Summary: Strategy list
 
 
-.container-flud
-  .row-fluid
-    .span9
+.container
+  .row
+    .col-lg-9
       %h1 Strategies
       :markdown
         A summary of the various active algorithmic strategies 
 
-    .span3
+    .col-lg-3
       = haml :strategy_menu, :layout => false
 
 /#sidebar

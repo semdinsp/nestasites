@@ -1,5 +1,3 @@
-%script(type="text/javascript" src="http://code.jquery.com/jquery.js")
-%script(type="text/javascript" src="/bootstrap/js/bootstrap.min.js")
 
 %br
 %br
@@ -22,4 +20,15 @@
               Developed by Scott with Nesta, a
               = succeed "." do
                 %a(href="http://nestacms.com") Ruby CMS
-              using the twitter bootstrap css theme to provide responsive support on various devices.
+              using the twitter 
+              %a(href="http://getbootstrap.com/") boostrap
+              css v3 to provide responsive support on various devices.
+              Code for the entire website is available at
+              %a(href="http://github.com/semdinsp/nestasites") github source
+
+%script(type="text/javascript" src="http://code.jquery.com/jquery.js")
+%script(type="text/javascript" src="/bootstrap/js/bootstrap.min.js")
+%script(type="text/javascript" src="/javascripts/application.js")
+%script(type="text/javascript" src="http://yandex.st/highlightjs/7.3/highlight.min.js")
+  :javascript
+    hljs.initHighlightingOnLoad();

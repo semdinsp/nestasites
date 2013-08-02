@@ -3,9 +3,9 @@ Template: home
 Summary: How to compile coffee script to java script from within the Ruby console
 Date: 10 July 2011
 
-.container-fluid
-  .row-fluid
-    .span9  
+.container
+  .row
+    .col-lg-9  
       %h1 Compile coffeescript to javascript
 
       %p On my mac compiling coffeescript to javascript was not self evident.  I did it by entering rails console and then running the following commands
@@ -17,6 +17,6 @@ Date: 10 July 2011
         
 
 
-    .span3
+    .col-lg-3
       = haml :technote_menu, :layout => false
 
