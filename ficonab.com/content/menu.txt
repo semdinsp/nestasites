@@ -5,6 +5,7 @@ strategies
   strategies/value
 technotes
   technotes/index
+  technotes/bootstrapv3
   technotes/resque
   technotes/sendmail
   technotes/coffeescript
