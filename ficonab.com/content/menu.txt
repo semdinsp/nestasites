@@ -3,6 +3,7 @@ about
 strategies
   strategies/geographic
   strategies/value
+  strategies/lumpy_streams
 technotes
   technotes/index
   technotes/bootstrapv3
