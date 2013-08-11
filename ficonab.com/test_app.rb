@@ -24,7 +24,7 @@ class FiconabTest < Test::Unit::TestCase
   end
 
   def test_key_pages
-     pagelist=["/contact","/about","/technotes","/strategies","strategies/value"]
+     pagelist=["contact","about","technotes","strategies","strategies/value", "/"]
      pagelist.each { |page| 
           get page
           assert last_response.ok?, "#{page} not found"
