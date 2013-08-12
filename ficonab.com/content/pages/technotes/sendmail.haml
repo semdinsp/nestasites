@@ -10,6 +10,12 @@ Date: 7 July 2011
 
       %p I have had problems with mathematica on versions 7,8,9 using sendmail to a remote server or gmail.  The best solution i have found so far is to configure postfix and send via localhost.
 
+      %p Clearing/deleting the postfix queue
+
+      %pre
+        %code
+          sudo postsuper -d ALL
+
       %p Sometimes starting postfix does not automatically start.  Attached are the launch ctl commands to start postfix.
 
       %pre
