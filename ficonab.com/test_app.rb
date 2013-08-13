@@ -1,6 +1,7 @@
+require "bundler/setup"
 require 'test/unit'
 require 'rubygems'
-gem 'rack-test'
+#gem 'rack-test'
 require 'rack/test'
 require 'nesta/env'
 Nesta::Env.root = ::File.expand_path('.', ::File.dirname(__FILE__))

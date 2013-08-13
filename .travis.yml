@@ -3,8 +3,7 @@ rvm:
   - "1.9.3"
   - "2.0.0"
 gemfile: estormtech.com/Gemfile
-script: sh -c 'cd ficonab.com && ruby test_app.rb'
-script: sh -c 'cd estormtech.com && ruby test_app.rb'
+script: sh -c 'cd ficonab.com && ruby test_app.rb && cd ../estormtech.com && ruby test_app.rb'
 notifications:
   recipients:
     - scott.sproule@estormtech.com
