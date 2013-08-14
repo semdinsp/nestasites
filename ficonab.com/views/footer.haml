@@ -10,21 +10,23 @@
           Version, Copyright and System information
       #collapseOne{:class=> "accordion-body collapse"}
         .accordion-inner
-          %h6 
-            = "Version: " + "1.4"
-          %img(src="/attachments/ficonab.jpg" width=80 height=30 alt='estorm logo')
-          %a(href='http://www.ficonab.com')
-          %h6 Copyright Ficonab Pte. Ltd. 2013
-          %p
-            %small
-              Developed by Scott with Nesta, a
-              = succeed "." do
-                %a(href="http://nestacms.com") Ruby CMS
-              using the twitter 
-              %a(href="http://getbootstrap.com/") boostrap
-              css v3 to provide responsive support on various devices.
-              Code for the entire website is available at
-              %a(href="http://github.com/semdinsp/nestasites") github source
+          .panel
+            .panel-heading
+              .panel-title
+                = "Version: " + "1.4"
+            %img(src="/attachments/ficonab.jpg" width=80 height=30 alt='estorm logo')
+            %a(href='http://www.ficonab.com')
+            %h6 Copyright Ficonab Pte. Ltd. 2013
+            %p
+              %small
+                Developed by Scott with Nesta, a
+                = succeed "." do
+                  %a(href="http://nestacms.com") Ruby CMS
+                using the twitter 
+                %a(href="http://getbootstrap.com/") boostrap
+                css v3 to provide responsive support on various devices.
+                Code for the entire website is available at
+                %a(href="http://github.com/semdinsp/nestasites") github source
 
 %script(type="text/javascript" src="http://code.jquery.com/jquery.js")
 %script(type="text/javascript" src="/bootstrap/js/bootstrap.min.js")

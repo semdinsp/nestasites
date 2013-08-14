@@ -1,8 +1,31 @@
 
+%br
+%br
 .footer
-  %p
-    .small
-      Copyright (C) Estorm Technologies Pte. Ltd. 2013
+  .accordian#footeraccordian
+    .accordian-group
+      .accordian-heading
+      %a{:class=>"accordion-toggle", "data-toggle"=>"collapse" , "data-parent"=>"#footeraccordian", :href=>"#collapseOne"}
+        .small
+          Copyright and System information
+      #collapseOne{:class=> "accordion-body collapse"}
+        .accordion-inner
+          .panel
+            .panel-heading
+              .panel-title
+                Copyright (C) Estorm Technologies Pte. Ltd. 2013
+            %a(href='http://www.estormtech.com')
+            %p
+              %small
+                Developed by Scott with Nesta, a
+                = succeed "." do
+                  %a(href="http://nestacms.com") Ruby CMS
+                using the twitter 
+                %a(href="http://getbootstrap.com/") boostrap
+                css v3 to provide responsive support on various devices.
+                Code for the entire website is available at
+                %a(href="http://github.com/semdinsp/nestasites") github source
+
 
 %script(type="text/javascript" src="http://code.jquery.com/jquery.js")
 %script(type="text/javascript" src="/bootstrap/js/bootstrap.js")
